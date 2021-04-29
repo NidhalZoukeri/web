@@ -27,7 +27,7 @@
             <p class="mt-5 border-left border-dark pl-3"><?php echo $q['content'];?></p>
         <?php } ?>    
 
-        <a href="forum.php" class="btn btn-outline-dark my-3">Go Home</a>
+        <a href="aff conseil.php" class="btn btn-outline-dark my-3">Go back</a>
    </div>
 
     <!-- Bootstrap JS -->

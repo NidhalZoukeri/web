@@ -47,9 +47,8 @@
 				<div class="collapse navbar-collapse" id="navbars-rs-food">
 					<ul class="navbar-nav ml-auto">
 						<li class="nav-item"><a class="nav-link" href="Forum.php">Forum</a></li>
-						<li class="nav-item"><a class="nav-link" href="aff conseil.php">les conseils</a></li>
 						<li class="nav-item"><a class="nav-link" href="Tableau Forum.php">gérer Forum</a></li>
-						
+						<li class="nav-item"><a class="nav-link" href="aff conseil.php">les conseils</a></li>
 					</ul>
 				</div>
 			</div>
@@ -62,7 +61,7 @@
 		<div class="container text-center">
 			<div class="row">
 				<div class="col-lg-12">
-					<h1>remplir forum</h1>
+					<h1>Forumulaire</h1>
 				</div>
 			</div>
 		</div>
@@ -75,8 +74,8 @@
 		<div class="container">
 		<div class="col-lg-12">
 					<div class="heading-title text-center">
-						<h2>forum</h2>
-						<p>Formulaire d'ajout</p>
+						<h2>Formulaire d'ajout</h2>
+						<p>merci de remplir ce forumulaire</p>
 					</div>
 				</div>
 		<?php 
@@ -137,14 +136,14 @@
                     <div class="form-group">    
                        <label class="control-label col-md-2 col-sm-1 col-xs-4" align="left">Largeur<span class="required"><font color="red">&nbsp;*</font></span></label>
                         <div class="col-md-9 col-sm-9 col-xs-12">
-						<input type="text" class="form-control" name="Largeur" id="Largeur" placeholder="Entrer votre largeur" required>
+						<input type="number" class="form-control" name="Largeur" id="Largeur" placeholder="Entrer votre largeur" required>
 						</div>
 				    </div>	<br/> <br/><br/>
 						 <div class="form-group">    
                         <label class="control-label col-md-2 col-sm-1 col-xs-4" align="left">Age<span class="required"><font color="red">&nbsp;*</font></span></label>
                         <div class="col-md-9 col-sm-9 col-xs-12">
 
-						<input type="text" class="form-control" name="Age" id="Age" placeholder="Entrer un Age" required>
+						<input type="number" class="form-control" name="Age" id="Age" placeholder="Entrer un Age" required>
                          
 						</div>
 				    </div><br/> <br/><br/>

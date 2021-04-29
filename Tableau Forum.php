@@ -87,6 +87,26 @@ $result = mysqli_query($conn, $sql);
 	<!-- End All Pages -->
 	
 	<!-- Start blog -->
+	<?php 
+
+if(isset($_GET['search'])){
+     $searchKey = $_GET['search']; // grab keyword
+     $sql    = "SELECT * FROM forum WHERE Nom LIKE '%$searchKey%'";
+}else
+    $sql    = "SELECT * FROM forum";
+			
+    $result = $conn->query($sql);
+?>
+<form action="" method="GET"> 
+     <div class="col-md-6">
+        <input type="text" name="search" class='form-control' placeholder="Search By Name" value=<?php echo @$_GET['search']; ?> > 
+     </div>
+     <div class="col-md-6 text-left">
+      <button class="btn btn-danger">Search</button>
+     </div>
+   </form>
+
+   <br> 
 	<div class="blog-box">
 	
 		<div class="container">
@@ -160,7 +180,8 @@ $result = mysqli_query($conn, $sql);
 												<th>Sexe</th>
 												<th>Action</th> 
 												<th>delete</th>
-                                            </tr>      
+                                            </tr>  
+											  
 											</thead>
 
 											<tfoot>
@@ -183,13 +204,13 @@ $result = mysqli_query($conn, $sql);
 								?>
 											<tr>
 										
-											<td><?php echo $Nom; ?></td>
-									      	<td><?php echo $Prenom; ?></td>
-											<td><?php echo $Poids; ?></td>
-											<td><?php echo $Largeur; ?></td>
-											<td><?php echo $Age; ?></td>
-											<td><?php echo $sexe; ?></td>
-											<td>   <a href="forum edit.php?editid=<?php echo $id; ?>">
+											<td><?php echo $row['Nom']; ?></td>
+									      	<td><?php echo $row['Prenom']; ?></td>
+											<td><?php echo $row['Poids']; ?></td>
+											<td><?php echo $row['Largeur']; ?></td>
+											<td><?php echo $row['Age']; ?></td>
+											<td><?php echo $row['Sexe']; ?></td>
+											<td>   <a href="forum edit.php?editid=<?php echo $row['id']; ?>">
                                                     <img src="images/edit.png" width="50"> 
                                                 </a> </td>
 												

@@ -71,7 +71,7 @@ include "logic.php";
 		<div class="container text-center">
 			<div class="row">
 				<div class="col-lg-12">
-					<h1>Blog</h1>
+					<h1>Les Conseils</h1>
 				</div>
 			</div>
 		</div>

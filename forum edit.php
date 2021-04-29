@@ -94,6 +94,8 @@ if (isset($_POST['submit'])) {
     $query = mysqli_query($conn, "update forum set Nom ='$Nom', Prenom ='$Prenom' , Poids ='$Poids' , Largeur ='$Largeur', Age ='$Age' , sexe ='$sexe'   where id='$id'");
     if ($query) {
         $msg = "Forum modifier";
+		header('Location: Tableau Forum.php');
+
     } else {
         $msg = "Problème de modification";
     }
