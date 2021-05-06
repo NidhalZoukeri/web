@@ -86,6 +86,7 @@
     if (isset($_POST['submit'])) {
     $Nom = $_POST['Nom'];
     $Prenom = $_POST['Prenom'];
+	$adress = $_POST['adress'];
     $Poids = $_POST['Poids'];
     $Largeur = $_POST['Largeur'];
     $Age = $_POST['Age'];
@@ -94,7 +95,7 @@
 
     
      
-    $query = mysqli_query($conn, "insert into forum( Nom , Prenom , Poids , Largeur, Age, sexe) value ( '$Nom' , '$Prenom' , '$Poids' , '$Largeur', '$Age', '$sexe') ");
+    $query = mysqli_query($conn, "insert into forum( Nom , Prenom ,adress, Poids , Largeur, Age, sexe) value ( '$Nom' , '$Prenom' ,'$adress', '$Poids' , '$Largeur', '$Age', '$sexe') ");
     if ($query) {
         echo "<script>alert('Forum ajouté avec succès!');</script>";
     } else {
@@ -123,6 +124,14 @@
 				    </div>
 					
 								<br/> <br/><br/>
+								<div class="form-group">
+                         <label class="control-label col-md-2 col-sm-1 col-xs-4">adress<span class="required"><font color="red">&nbsp;*</font></span></label>
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                             <input type="text" class="form-control" name="adress" id="adress" placeholder="Entrer votre adress" required>
+						</div>
+				    </div>
+					
+								<br/> <br/><br/>		
 								
                      <div class="form-group">
                          <label class="control-label col-md-2 col-sm-1 col-xs-4">Poids<span class="required"><font color="red">&nbsp;*</font></span></label>
@@ -157,7 +166,7 @@
                          
 						</div>
 				    </div>
-					<center><input type="submit" name="submit" class="submit btn btn-success" value="Submit" /></center>
+					<center><input type="submit" name="submit" class="submit btn btn-danger" value="Submit" /></center>
 			<div class="row">
 				
 		

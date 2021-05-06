@@ -124,6 +124,7 @@ if(isset($_GET['search'])){
     if (isset($_POST['submit'])) {
     $Nom = $_POST['Nom'];
     $Prenom = $_POST['Prenom'];
+	$adress = $_POST['adress'];
     $Poids = $_POST['Poids'];
     $Largeur = $_POST['Largeur'];
     $Age = $_POST['Age'];
@@ -174,6 +175,7 @@ if(isset($_GET['search'])){
                                              <tr>
 												<th>Nom</th>
 												<th>Prenom</th>
+												<th>adress</th>
 												<th>Poids</th> 
 												<th>Largeur</th>
 												<th>Age</th>
@@ -196,6 +198,7 @@ if(isset($_GET['search'])){
 												$id=$ligne3x['id'];
 											    $Nom= $ligne3x['Nom'];
 												$Prenom= $ligne3x['Prenom'];
+												$Prenom= $ligne3x['adress'];
 												$Poids = $ligne3x['Poids'];
 										        $Largeur= $ligne3x['Largeur'];
 												$Age= $ligne3x['Age'];
@@ -206,6 +209,7 @@ if(isset($_GET['search'])){
 										
 											<td><?php echo $row['Nom']; ?></td>
 									      	<td><?php echo $row['Prenom']; ?></td>
+											<td><?php echo $row['adress']; ?></td>
 											<td><?php echo $row['Poids']; ?></td>
 											<td><?php echo $row['Largeur']; ?></td>
 											<td><?php echo $row['Age']; ?></td>

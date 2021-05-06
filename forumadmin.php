@@ -62,8 +62,8 @@ $result = mysqli_query($conn, $sql);
 				</button>
 				<div class="collapse navbar-collapse" id="navbars-rs-food">
 					<ul class="navbar-nav ml-auto">
-						<li class="nav-item"><a class="nav-link" href="conseil.php">ajouter conseil</a></li>
-						<li class="nav-item"><a class="nav-link" href="admin.php">repondre forum</a></li>
+						
+						<li class="nav-item"><a class="nav-link" href="Forum.php">back</a></li>
 						
 						
 						
@@ -79,7 +79,7 @@ $result = mysqli_query($conn, $sql);
 		<div class="container text-center">
 			<div class="row">
 				<div class="col-lg-12">
-					<h1>Conseil</h1>
+					<h1>forum</h1>
 				</div>
 			</div>
 		</div>
@@ -113,7 +113,7 @@ if(isset($_GET['search'])){
 		<div class="col-lg-12">
 					<div class="heading-title text-center">
 						<h2>forum</h2>
-						<p>gérer forum</p>
+						<p>gérer les forums</p>
 					</div>
 				</div>
 		<?php 
@@ -133,7 +133,7 @@ if(isset($_GET['search'])){
 
     
      
-    $query = mysqli_query($conn, "insert into forum( Nom , Prenom ,adress, Poids , Largeur, Age, sexe) value ( '$Nom' , '$Prenom' ,'$adress', '$Poids' , '$Largeur', '$Age', '$sexe') ");
+    $query = mysqli_query($conn, "insert into forum( Nom , Prenom ,adress , Poids , Largeur, Age, sexe) value ( '$Nom' , '$Prenom' , '$Poids' , '$Largeur', '$Age', '$sexe') ");
     if ($query) {
         echo "<script>alert('Forum ajouté avec succès!');</script>";
     } else {
@@ -180,7 +180,8 @@ if(isset($_GET['search'])){
 												<th>Largeur</th>
 												<th>Age</th>
 												<th>Sexe</th>
-												<th>mail</th>
+												<th>Action</th> 
+												<th>delete</th>
                                             </tr>  
 											  
 											</thead>
@@ -208,18 +209,20 @@ if(isset($_GET['search'])){
 										
 											<td><?php echo $row['Nom']; ?></td>
 									      	<td><?php echo $row['Prenom']; ?></td>
-											  <td><?php echo $row['adress']; ?></td>  
+											<td><?php echo $row['adress']; ?></td>
 											<td><?php echo $row['Poids']; ?></td>
 											<td><?php echo $row['Largeur']; ?></td>
 											<td><?php echo $row['Age']; ?></td>
 											<td><?php echo $row['Sexe']; ?></td>
-											
+											<td>   <a href="forum edit.php?editid=<?php echo $row['id']; ?>">
+                                                    <img src="images/edit.png" width="50"> 
+                                                </a> </td>
 												
 												<td>
 												
-												<a href="mail.php?mail=<?= $row['id']; ?>" 
+												<a href="delete.php?delete=<?= $row['id']; ?>" 
 												class="btn btn-danger" 
-												>Mailing</a></td>
+												>Delete</a></td>
 
 												<?php
 }}
@@ -232,7 +235,6 @@ if(isset($_GET['search'])){
 						
 		</div>
 	</div>
-	
 	<!-- End blog -->
 	
 	<!-- Start Contact info -->

@@ -90,7 +90,7 @@
 
 <!-- Create a new Post button -->
 <div class="text-center">
-	<a href="create.php" class="btn btn-outline-dark">+ Create a new post</a>
+	<a href="create.php" class="btn btn-outline-danger">+ Create a new post</a>
 </div>
 
 <!-- Display posts from database -->

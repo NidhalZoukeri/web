@@ -86,12 +86,13 @@
 if (isset($_POST['submit'])) {
     $Nom = $_POST['Nom'];
     $Prenom = $_POST['Prenom'];
+	$adress = $_POST['adress'];
     $Poids = $_POST['Poids'];
     $Largeur = $_POST['Largeur'];
     $Age = $_POST['Age'];
     $sexe = $_POST['sexe'];
     $id=$_GET['editid'];
-    $query = mysqli_query($conn, "update forum set Nom ='$Nom', Prenom ='$Prenom' , Poids ='$Poids' , Largeur ='$Largeur', Age ='$Age' , sexe ='$sexe'   where id='$id'");
+    $query = mysqli_query($conn, "update forum set Nom ='$Nom', Prenom ='$Prenom' , adress ='$adress', Poids ='$Poids' , Largeur ='$Largeur', Age ='$Age' , sexe ='$sexe'   where id='$id'");
     if ($query) {
         $msg = "Forum modifier";
 		header('Location: Tableau Forum.php');
@@ -147,6 +148,31 @@ if (isset($_POST['submit'])) {
 				    </div>
 					
 								<br/> 
+
+								<div class="form-group">
+                         <label class="control-label col-md-2 col-sm-1 col-xs-4">adress<span class="required"><font color="red">&nbsp;*</font></span></label>
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                          
+                         <?php  include_once('config4.php');
+						 
+						               $id=$_GET['editid'];
+												$requete3x = "SELECT adress FROM forum where id='$id' ";
+												$resultat3x = $mysqli->query($requete3x);
+												
+												while ($ligne3x = $resultat3x->fetch_assoc()) {
+												
+											    $adress= $ligne3x['adress'];
+								?>
+										<input type="text" class="form-control" name="adress" id="adress" value="<?php echo $adress;?>" style="width: 50%" required> 
+										<?php
+										}
+								?>
+					 
+						</div>
+				    </div>
+					
+								<br/> 		
+							
 								
                      <div class="form-group">
                          <label class="control-label col-md-2 col-sm-1 col-xs-4">Poids<span class="required"><font color="red">&nbsp;*</font></span></label>
