@@ -54,7 +54,7 @@
     </div>
  
     <div>
-         <label>Name</label>
+         <label>Nom de conseil</label>
         <input type="text" name="name">
     </div>
  

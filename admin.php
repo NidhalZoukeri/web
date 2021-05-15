@@ -63,7 +63,7 @@ $result = mysqli_query($conn, $sql);
 				<div class="collapse navbar-collapse" id="navbars-rs-food">
 					<ul class="navbar-nav ml-auto">
 						<li class="nav-item"><a class="nav-link" href="conseil.php">ajouter conseil</a></li>
-						<li class="nav-item"><a class="nav-link" href="admin.php">repondre forum</a></li>
+						<li class="nav-item"><a class="nav-link" href="admin.php">les forum</a></li>
 						
 						
 						
@@ -180,7 +180,7 @@ if(isset($_GET['search'])){
 												<th>Largeur</th>
 												<th>Age</th>
 												<th>Sexe</th>
-												<th>mail</th>
+												
                                             </tr>  
 											  
 											</thead>
