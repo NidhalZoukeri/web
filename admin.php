@@ -180,6 +180,8 @@ if(isset($_GET['search'])){
 												<th>Largeur</th>
 												<th>Age</th>
 												<th>Sexe</th>
+												<th>mail</th>
+												<th>stats</th>
 												
                                             </tr>  
 											  
@@ -220,6 +222,11 @@ if(isset($_GET['search'])){
 												<a href="mail.php?mail=<?= $row['id']; ?>" 
 												class="btn btn-danger" 
 												>Mailing</a></td>
+
+												<td>
+												<a href="pie.php?mail=<?= $row['id']; ?>" 
+												class="btn btn-danger" 
+												>stats</a></td>
 
 												<?php
 }}
